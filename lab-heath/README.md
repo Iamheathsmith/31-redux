@@ -32,14 +32,18 @@ once you have done that. you can go to your localhost:8080 and see your project 
 ## How to use
 
 you have 2 input boxes that will take in a strings. this is a `title` and a `price`. you will have a button below that will submit the data into the app that will return an list item that will have the title, data made, and price.
+--- 
 
 ### fail safe
 you need to have both items in the input box or you will get an aleart saying that you need both items. once you have entered both, the button will then work.
 
 above the input form is a running total of the amount spent of items.
+---
 
 ### Updating data
 you can also double click on the grey box that will open up an update form. Here you can change the data if needed. once you have hit the Update buttin, the running total will also update as well. 
+--- 
 
 ### delete button
 Just hit the delete button on the item and it will remove that item from storage.
+
