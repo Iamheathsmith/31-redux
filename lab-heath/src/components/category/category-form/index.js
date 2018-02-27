@@ -1,4 +1,5 @@
 import React from 'react';
+import { renderIf } from '../../../lib/untils';
 
 class CategoryForm extends React.Component {
   constructor(props) {
@@ -20,7 +21,8 @@ class CategoryForm extends React.Component {
 
   handleSubmit(e) {
     e.preventDefault();
-    this.props.onComplete(this.state);
+    !this.state.value || !this.state.title ? alert('need both inputs') :
+      this.props.onComplete(this.state);
     this.setState({
       title: '',
       value: 0,
@@ -30,14 +32,14 @@ class CategoryForm extends React.Component {
   render() {
     return  (
       <form className="input-area" onSubmit={this.handleSubmit}>
-        <input 
+        <input className="input"
           type="text"
           name="title"
           placeholder="title"
           value={this.state.title}
           onChange={this.handleChange}/>
 
-        <input 
+        <input className="input"
           type="number"
           name="value"
           placeholder="amount"

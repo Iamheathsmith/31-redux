@@ -12,15 +12,15 @@ import index from '../category/category-item/index.js';
 
 class Dashboard extends React.Component {
   render() {
+    let totalSpend = this.props.categories.reduce((a, b) => a + parseInt(b.value), 0);
+
     return (
       <section>
         <h1>Expense Tracker 2000!</h1>
-
+        <h3 className="total">Total Spend: ${totalSpend}</h3>
         <CategoryForm
           buttonText='create'
           onComplete={this.props.dashboardCategoryCreate}/>
-     
-
 
         {this.props.categories ?
           this.props.categories.map(category => 
