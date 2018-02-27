@@ -3,6 +3,12 @@ import {connect} from 'react-redux';
 import {categoryCreate} from '../../actions/category-actions';
 import CategoryItem from '../category/category-item/index.js';
 import CategoryForm from '../../components/category/category-form/index';
+import category from '../../reducers/category';
+import index from '../category/category-item/index.js';
+
+
+
+
 
 class Dashboard extends React.Component {
   render() {
@@ -13,6 +19,8 @@ class Dashboard extends React.Component {
         <CategoryForm
           buttonText='create'
           onComplete={this.props.dashboardCategoryCreate}/>
+     
+
 
         {this.props.categories ?
           this.props.categories.map(category => 
