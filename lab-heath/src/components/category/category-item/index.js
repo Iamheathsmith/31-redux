@@ -36,10 +36,11 @@ class CategoryItem extends React.Component{
 
   render(){
     return(
-      <div className="items" onDoubleClick={() => this.setState({updating: !this.state.updating})}>
+      <div className={this.state.updating === true ? 'items' : 'normal'} onDoubleClick={() => this.setState({updating: !this.state.updating})}>
+        {}
         <h2>Item: {this.props.category.title}</h2>
         <h6>Date: {this.props.category.timestamp.toString()}</h6>
-        <h4>Amount: ${this.props.category.value}</h4>
+        <p>Amount: ${this.props.category.value}</p>
         <button
           className='delete_btn'
           type='button'
